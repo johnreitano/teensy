@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Target url:</strong>
+  <%= @url_mapping.target_url %>
+</p>
+
+<p>
+  <strong>Short path:</strong>
+  <%= @url_mapping.short_path %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @url_mapping.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_url_mapping_path(@url_mapping) %> |
+<%= link_to 'Back', url_mappings_path %>

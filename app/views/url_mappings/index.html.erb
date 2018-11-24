@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Url Mappings</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Target url</th>
+      <th>Short path</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @url_mappings.each do |url_mapping| %>
+      <tr>
+        <td><%= url_mapping.target_url %></td>
+        <td><%= url_mapping.short_path %></td>
+        <td><%= url_mapping.user_id %></td>
+        <td><%= link_to 'Show', url_mapping %></td>
+        <td><%= link_to 'Edit', edit_url_mapping_path(url_mapping) %></td>
+        <td><%= link_to 'Destroy', url_mapping, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Url Mapping', new_url_mapping_path %>
